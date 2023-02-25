@@ -1,13 +1,20 @@
-﻿string[] text={"Hey","rock","n","roll"};
+﻿
+string[] array={"Hey","rock","n","roll"};
 int maxLength=3;
+string[] array2=new string[array.Length];
+int count=0;
+for (int i = 0; i < array.Length; i++)
 
-for (int i = 0; i < text.Length; i++)
 {
-        if(text[i].Length<=maxLength)
+  
+        if(array[i].Length<=maxLength)
     {
-
-Console.Write($"{text[i]} ");
+        array2[count] =array[i];
+        count++;
     }
 
 }
-
+foreach (var item in array2)
+{
+    Console.Write(item);
+}
